@@ -1,0 +1,20 @@
+dias=('Lun','Mar','Mie','Jue','Vie','Sab','Dom')
+for dia in dias:
+    print(dia)
+
+for dia_numero in enumerate(dias,1):
+    print(dia_numero)
+
+#letras=('a','b','c','d','e','fghijklmnoprstuvwxyz')
+letras='abcdefghijklmnoprstuvwxyz'
+
+letrasDelAlfabeto=tuple(x for x in letras )
+for letra in enumerate(letrasDelAlfabeto,40):
+    print("letra:",letra)
+
+#Desempaquetar los valores de la tupla
+postres=('tiramisu','maracuya','milo','limon')
+#unpaking
+postrea,postreb,postrec,postred=postres #Unpacking elementos
+
+nuevospostres=(postrea,postreb,postrec)

@@ -1,0 +1,48 @@
+from random import randint
+# Hacer un programa que procese las edades de 100 personas. 
+# Deberá decir cuantas tienen más de (≥18) y cuál es la persona con menor edad y cuál es la persona con mayor edad. 
+# También deberá mostrar el porcentaje de edades de las 100 personas.
+
+# crear una lista
+#devuelve una lista str
+def rellenar_lista_aleatoria():
+    lista_de_edades = [] 
+    for n in range(100): #iteracciones
+        num = randint(15,22) #generar un numero entre 15 y 22
+        lista_de_edades.append(num) #agrego el num alea a la  lista
+
+    return lista_de_edades #devuelve la lista
+
+# calcular edades
+def calcular_conteos(lista_edades): #(parametro)
+    mayores_edad = 0
+    menores_edad = 0
+    edad_max = 0
+    for edad in lista_edades:
+        if edad >= 18:
+            mayores_edad += 1
+        else:
+            menores_edad += 1
+        if edad > edad_max:
+            edad_max = edad
+    print(f"{mayores_edad} son mayores de edad")
+    print(f"{menores_edad} son menores de edad")
+    print(f"La edad máxima es {edad_max}")
+
+#identificar % de los 100 con dicc
+def porcentajes(lista_edades):
+    valores_unicos = list(set(lista_edades)) # dejar en una variable solo valores unicos, quitar los repetidos, luego vuelvo a convertir en list
+    edades_porcentaje = {} # llaves,  voy a crear un diccionario, lo dejo vacio. Edad es clave y porcentaje es el valor
+    for edad in valores_unicos:
+        numero_personas = lista_edades.count(edad) # aqui pretendo contar en la lista de edades, el numero de personas con su eddad (cuantas personas tienen esa edad)
+        porcentaje = numero_personas / len(lista_edades) * 100 # porcentaje: num de personas dividido entre la longitud de la lista(cantidad max)
+        edades_porcentaje[edad] = f"{porcentaje:.0f}%" #  en el dicc edad_porc, con la clave edad le añado el procenatajeel porcentaje para cada edad en [acceder al indice de la clave q es edad], el formato del porcentaje es sin decimales(float)
+    
+    print("Los porcentajes por edades son:") 
+    for edad, porcentaje in edades_porcentaje.items(): # recorrer el dicc uso el items porq dicc no es lista items: devuelve clave y valor en forma de lista dicc c:edad, v:%
+        print(f" - {edad} años --> {porcentaje}")
+
+#invocacion para que se ejecute
+lista = rellenar_lista_aleatoria()
+calcular_conteos(lista)
+porcentajes(lista)

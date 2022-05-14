@@ -1,0 +1,17 @@
+#print("Ingrese numero 1")
+Num1=input("Ingrese numero 1")
+#print("Ingrese numero 2")
+
+Num2=input()
+print("Ingrese numero 3")
+Num3=input()
+Num1=int(Num1)
+Num2=int(Num2)
+Num3=int(Num3)
+if(Num1<0):
+    Resul=Num1 * Num2 * Num3
+else:
+    Resul=Num1 + Num2 + Num3
+#Fin si
+print(Resul)
+

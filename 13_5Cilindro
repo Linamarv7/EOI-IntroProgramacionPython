@@ -1,0 +1,7 @@
+# Volumen y Area de un Cilindro
+PI = 3.1416
+h = float(input("Escriba altura en m: "))
+r = float(input("Escriba radio en m: "))
+area = 2 * r * (h + r) * PI 
+volumen = r**2 * h * PI
+print(f"Area (m^2): {area}, Volumen (m^3): {volumen}")

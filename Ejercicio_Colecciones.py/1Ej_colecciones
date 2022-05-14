@@ -1,0 +1,38 @@
+from random import randint
+#crear una lista aletoria de H y M
+#devuelve una lista str
+def rellenar_lista_aleatoria():
+    lista_de_sexo = [] #metodo
+    for n in range(100): 
+        num = randint(0,1) #generar un numero entre 0 y 1
+        if num == 0:
+            lista_de_sexo.append("H")
+        else:
+            lista_de_sexo.append("M")
+    return lista_de_sexo
+
+# contar num de H y M
+def contar_elementos(lista): #(argumento, esto me lo va a devolver y contar)
+    total_h = 0
+    total_m = 0
+    for valor in lista:
+        if valor == "H":
+            total_h += 1
+        else: #elijo else xq es mas eficiente q el if/elif
+            total_m += 1
+    return total_h, total_m
+
+# identificar cuantos H y M hay (>,<,=)
+def imprimir_mensaje(hombres, mujeres):
+    print(f"Hay {hombres} hombres y {mujeres} mujeres")
+    if hombres > mujeres:
+        print("El número de hombres es mayor")
+    elif hombres < mujeres:
+        print("El número de mujeres es mayor")
+    else:
+        print("Hay igual número de hombres y mujeres")
+
+lista = rellenar_lista_aleatoria()
+print(lista)
+total_h, total_m = contar_elementos(lista)
+imprimir_mensaje(total_h, total_m)

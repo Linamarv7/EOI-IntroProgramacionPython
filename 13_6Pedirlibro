@@ -1,0 +1,12 @@
+#Pedir un libro en una biblioteca 
+ 
+librosenbiblio = ["20000 leguas de viaje submarino", "El principito", "Padre rico padre pobre", "Fisica cuántica"]
+print("Ir a la biblioteca")
+print("Ir al mostrador")
+titulo = input("Inserte titulo del libro: ")
+if titulo in librosenbiblio:
+    print("Entregar el documento")
+    print("Retirar el libro")
+else:
+    print("El libro no se encuentra disponible")
+print("Salir de la biblioteca")

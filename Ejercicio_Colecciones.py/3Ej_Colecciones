@@ -1,0 +1,80 @@
+from random import randint
+
+# crear una lista de 100 personas aleatoria. Cada persona es un dict con el formato Ej:{edad:45, sexo:'H}
+def rellenar_lista_aleatoria():
+    lista_personas = [] 
+    for n in range(100):
+        persona = {} #diccio
+        num_sexo = randint(0,1)
+        if num_sexo == 0:
+            persona['sexo'] = "H" #sex: clave
+        else:
+            persona['sexo'] = "M"
+     
+        num_edad = randint(15, 22)
+        persona['edad'] = num_edad # edad: valor
+        lista_personas.append(persona)
+
+    return lista_personas
+
+#Calcula la meda de una lista de numeros
+def media(lista_de_numeros):
+    suma=0 #variable aux para almacenar
+    for numero in lista_de_numeros:
+        suma= suma+numero
+    media = suma / len(lista_de_numeros)
+    return media
+
+# calcular los conteos de una lista de edades
+#Devuelve un dict con los conteos
+def calcular_conteos(lista_edades): #(parametro)
+    mayores_edad = 0
+    menores_edad = 0
+    edad_max = 0
+    edad_min = 1000
+    media_edad = media(lista_edades)
+    for edad in lista_edades:
+        if edad >= 18:
+            mayores_edad += 1
+        else:
+            menores_edad += 1
+        if edad > edad_max:
+            edad_max = edad
+        if edad < edad_min:
+            edad_min = edad
+    
+    conteos = {
+                'mayores_edad': mayores_edad,
+                'menores_edad': menores_edad,
+                'edad_maxima': edad_max,
+                'edad_minima': edad_min, 
+                'promedio_edad': media_edad
+              }
+
+    return conteos
+
+def imprimir_conteos(conteos, sexo):#sexo será hombres o mujeres
+    print(f"LISTA DE CONTEOS EN {sexo.upper()}")
+    print(f"{conteos.get('mayores_edad')} {sexo} son mayores de edad")
+    print(f"{conteos.get('menores_edad')} {sexo} son menores de edad")
+    print(f"La edad máxima en {sexo} es {conteos.get('edad_maxima')}")
+    print(f"La edad mínima en {sexo} es {conteos.get('edad_minima')}")
+    print(f"La media de edad en {sexo} es {conteos.get('promedio_edad')}")
+
+
+
+lista_personas = rellenar_lista_aleatoria()
+
+mujeres = []
+hombres = []
+for persona in lista_personas:
+    if persona.get('sexo') == 'H':
+        hombres.append(persona.get('edad'))
+    else:
+        mujeres.append(persona.get('edad'))
+
+conteos_hombres = calcular_conteos(hombres)
+conteos_mujeres = calcular_conteos(mujeres)
+
+imprimir_conteos(conteos_hombres, 'hombres')
+imprimir_conteos(conteos_mujeres, 'mujeres')

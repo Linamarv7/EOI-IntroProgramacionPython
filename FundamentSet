@@ -1,0 +1,9 @@
+ciudades={'Cali','Buga','Bogota','Pereira','Armenia','Pasto','Huila'}
+print(ciudades)
+ciudades.add('Ibague')
+ciudades.add('Choco')
+print(ciudades)
+for ciudad in ciudades:
+    print(ciudad)
+#para eliminar
+ciudades.discard('Choco')

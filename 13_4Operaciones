@@ -1,0 +1,20 @@
+#Realizar las cuatro operaciones básicas (Suma, Resta, Multiplicación, División)
+numero1 = int(input('Introduce número: '))
+numero2 = int(input('Introduce número: '))
+print('Que quieres hacer con los números: ')
+print('1-Sumar')
+print('2-Resta')
+print('3-Multi')
+print('4-Divid')
+opcion = input('Introduce una opción: ')
+if opcion == '1':
+    resul = numero1 + numero2
+elif opcion == '2':
+    resul = numero1 - numero2
+elif opcion == '3':
+    resul = numero1 * numero2
+elif opcion == '4':
+    resul = numero1 / numero2
+else:
+    resul = 'error'
+print(resul)

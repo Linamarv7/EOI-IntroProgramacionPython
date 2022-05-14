@@ -1,0 +1,6 @@
+Num=1
+Resul=0
+for Num in range(1,51):
+    Resul=Resul+Num
+print(Resul)
+#fin Suma...

@@ -1,0 +1,13 @@
+#Encontrar el mayor número de tres números
+num1 = int(input('Introduce el primer número: '))
+num2 = int(input('Introduce el segundo número: '))
+num3 = int(input('Introduce el tercer número: '))
+#son variables por eso no van con ''
+#hago una lista
+#recorrer numero a numero, empiezo desde cero y lo comparo
+numeros = [num1, num2, num3]
+resul = 0
+for num in numeros:
+    if num > resul: 
+        resul = num
+print(f'El número mayor es {resul}')

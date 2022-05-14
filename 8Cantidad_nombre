@@ -1,0 +1,19 @@
+#print("Ingresar Nombre")
+while(True):
+    nombre=input("Ingresar Nombre (N para finalizar):")
+
+#print("Ingresar Cantidad")
+Num=input("Ingresar Cantidad:")
+if(not nombre.isdigit()):
+    if(Num.isdigit()):
+        Num=int(Num)
+        while (Num>0):
+            print(nombre)
+            Num=Num - 1
+        #fin mientras
+    else:
+        print("Por favor entra la cantidad numérica")
+else:
+    print("Por favor entre el nombre en texto")
+#finCanditad_nombre
+

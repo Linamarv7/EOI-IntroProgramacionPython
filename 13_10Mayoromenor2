@@ -1,0 +1,12 @@
+x=int(6)
+
+print("Introduce un número")
+y=int(input())
+if (y.isdigit()):
+    y=int(y)
+    if(x>=y):
+        print(f"{x} mayor o igual a {y}")
+    else:
+        print(f"{y} mayor o igual a {x}")
+else:
+    print('Introduce un número válido')

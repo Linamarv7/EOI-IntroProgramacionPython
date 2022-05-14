@@ -1,0 +1,8 @@
+# Encontrar si un numero es mayor o menor a un número dado.
+numero = int(input('Introduce un número: '))
+if numero > 10: 
+    resul = 'mayor'
+else:
+    resul = 'menor'
+print(f"el número {numero} es {resul} que 10")
+

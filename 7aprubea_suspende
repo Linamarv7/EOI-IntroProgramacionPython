@@ -1,0 +1,28 @@
+#print("Ingrese calificacion 1")
+from msilib import CAB
+
+
+Cal1=input("Ingrese calificacion 1:")
+#print("Ingrese calificacion 2:")
+Cal2=input("Ingrese calificacion 2:")
+#print("Ingrese calificacion 3:")
+Cal3=input("Ingrese calificacion 3:")
+
+if(Cal1.isdigit() and Cal2.isdigit() and Cal3.isdigit()):
+    #Validar las calificaciones
+    Cal1=int(Cal1)
+    Cal2=int(Cal2)
+    Cal3=int(Cal3)
+
+    if(Cal1>=0 and Cal1<=10):
+        Prom=(Cal1+Cal2+Cal3)//3
+        if (Prom>=4):
+            print("Aprueba")
+        else:
+            print("Suspende")
+        #fin if
+        print (Prom)
+    else:
+        print("El rango de las calificaciones no esta entre 0 y 10")
+else:
+    print("Por favor entre las calificaciones ")

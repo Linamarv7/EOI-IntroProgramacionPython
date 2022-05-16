@@ -1,0 +1,12 @@
+69 son mayores de edad
+31 son menores de edad
+La edad máxima es 22
+Los porcentajes por edades son:
+ - 15 años --> 10%
+ - 16 años --> 10%
+ - 17 años --> 11%
+ - 18 años --> 15%
+ - 19 años --> 10%
+ - 20 años --> 15%
+ - 21 años --> 16%
+ - 22 años --> 13%

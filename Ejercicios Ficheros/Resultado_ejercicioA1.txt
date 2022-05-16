@@ -1,0 +1,2 @@
+Hay 58 hombres y 42 mujeres
+El número de hombres es mayor

@@ -48,24 +48,24 @@ def calcular_conteos(lista_edades): #(parametro)
 
     return conteos
 
-mujeres = []
 hombres = []
+mujeres = []
 
 genero = [randint(0,1) for n in range(1,101)]
-mujeres = [randint(0,101) for g in genero if g==1]
-hombres = [randint(0,101) for g in genero if g==0]
+hombres = [randint(0,101) for g in genero if g==1]
+mujeres = [randint(0,101) for g in genero if g==0]
 
-file1 = './Ejercicios Ficheros/Datos_chicos3.csv'
-file2 = './Ejercicios Ficheros/Datos_chicas3.csv'
+file1 = './Ejercicios Ficheros/Datos_hombres3.csv'
+file2 = './Ejercicios Ficheros/Datos_mujeres3.csv'
 
-lee_o_crea_fichero(file1, mujeres)
-lee_o_crea_fichero(file2, hombres)
+lee_o_crea_fichero(file1, hombres)
+lee_o_crea_fichero(file2, mujeres)
 
 conteos_hombres = str(calcular_conteos(hombres))
 conteos_mujeres = str(calcular_conteos(mujeres))
 
-file_res1 = './Ejercicios Ficheros/Resul_chicos3.csv'
-file_res2 = './Ejercicios Ficheros/Resul_chicas3.csv'
+file_res1 = './Ejercicios Ficheros/Resul_hombres3.csv'
+file_res2 = './Ejercicios Ficheros/Resul_mujeres3.csv'
 
 fichero_res1 = open(file_res1, 'wt', encoding='UTF-8')
 fichero_res1.write(conteos_hombres)

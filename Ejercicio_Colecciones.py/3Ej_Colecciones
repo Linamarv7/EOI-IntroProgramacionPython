@@ -17,7 +17,7 @@ def rellenar_lista_aleatoria():
 
     return lista_personas
 
-#Calcula la meda de una lista de numeros
+#Calcula la media de una lista de numeros
 def media(lista_de_numeros):
     suma=0 #variable aux para almacenar
     for numero in lista_de_numeros:

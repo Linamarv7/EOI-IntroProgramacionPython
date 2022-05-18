@@ -1,4 +1,5 @@
 from random import randint
+from dateutil.relativedelta import *
 #crear una lista aletoria de H y M
 #devuelve una lista str
 def rellenar_lista_aleatoria():
